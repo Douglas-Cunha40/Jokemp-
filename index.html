@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokempô</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Jokempô</h1>
+        <img src="./assets/images/logo.png" alt="Jokempo">
+    </header>
+
+    <div class="jogador">
+        <input type="text" id="playerName" placeholder="Seu nome">
+        <button onclick="startGame()">Iniciar Jogo</button>
+    </div>
+
+    <audio id="gameAudio" autoplay="false">
+        <source src="./assets/audio/jkp.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+    
+
+    <div id="game" class="hidden">
+        <p id="title">Escolha uma opção:</p>
+        <button onclick="playerChoice('PEDRA')"><img src="./assets/images/pedra.png" alt="Pedra"></button>
+        <button onclick="playerChoice('PAPEL')"><img src="./assets/images/papel.png" alt="Papel"></button>
+        <button onclick="playerChoice('TESOURA')"><img src="./assets/images/tesoura.png" alt="Tesoura"></button>
+        <h2>Placar</h2>
+        <p id="playerScore">Jogador: 0</p>
+        <p id="computerScore">Computador: 0</p>
+        <div class="personagens">
+            <img class="pers1" src="./assets/images/alex.webp" alt="alex kidd">
+            <img class="versus" src="./assets/images/vs.avif" alt="vs">
+            <img class="pers2" src="./assets/images/adv.png" alt="adversário">
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
